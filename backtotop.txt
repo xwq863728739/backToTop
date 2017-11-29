@@ -1,0 +1,31 @@
+js£º
+ 
+$(window).scroll(function(){
+   var sc=$(window).scrollTop();
+   var rwidth=$(window).width()
+   if(sc>0){
+    $("#goTopBtn").css("display","block");
+   }else{
+   $("#goTopBtn").css("display","none");
+   }
+ })
+ $("#goTopBtn").click(function(){
+   var sc=$(window).scrollTop();
+   $('body,html').animate({scrollTop:0},500);
+})
+
+html£º
+
+<div id="goTopBtn"></div>
+
+css£º
+
+#goTopBtn{position: fixed;
+    bottom: 35px;
+    cursor: pointer;
+    display: none;
+    right: 30px;
+    width: 54px;
+    height: 54px;
+    background: url(http://www.mfisp.com/templets/default/images/topback.gif);
+}
